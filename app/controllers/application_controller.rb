@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     #form links here
     @recipe = Recipe.new(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
     @recipe.save
-    binding.pry
+    
     redirect "/recipes/#{@recipe.id}"
   end
 
